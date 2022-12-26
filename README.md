@@ -4,7 +4,9 @@
 
 #### DEPLOY NETLIFY https://202210-w11-xmas-miguelpgomez.netlify.app/
 
-## DESCRIPCION
+#### SONAR : https://sonarcloud.io/project/overview?id=mig-code_202210-w11-xmas-miguelpgomez
+
+## DESCRIPCIÓN
 
 Tendrás que crear un frontend en React que permita al usuario gestionar un listado con sus robots.
 
