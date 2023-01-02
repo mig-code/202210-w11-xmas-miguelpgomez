@@ -1,0 +1,9 @@
+{
+    "robots": [
+        {
+            "name": "robot1",
+            "speed": 1,
+            "cretor": "user1"
+        }
+    ]
+}

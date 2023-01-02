@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export function Menu() {
     return (
@@ -10,10 +10,7 @@ export function Menu() {
                     </a>
                 </li>
                 <li className="main-nav__item">
-                    <Link to={"robots"}>
-                        Collection
-                    </Link>
-                    
+                    <Link to={'robots'}>Collection</Link>
                 </li>
             </ul>
         </nav>
