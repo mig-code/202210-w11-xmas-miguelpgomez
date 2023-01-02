@@ -1,9 +1,30 @@
 {
     "robots": [
         {
-            "name": "robot1",
-            "speed": 1,
-            "cretor": "user1"
-        }
+            "id": 1,
+            "name": "Robot1",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2020-01-01"
+
+        },
+        {
+            "id": 2,
+            "name": "robot2",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2021-01-01"
+        },
+        {
+            "id": 3,
+            "name": "robot3",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2022-01-01"
+        }  
+        
     ]
 }
