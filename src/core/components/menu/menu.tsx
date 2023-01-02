@@ -5,9 +5,7 @@ export function Menu() {
         <nav className="main-nav">
             <ul className="main-nav__list">
                 <li className="main-nav__item">
-                    <a href="/" className="main-nav__link">
-                        Home
-                    </a>
+                    <Link to={'/'}>Home</Link>
                 </li>
                 <li className="main-nav__item">
                     <Link to={'robots'}>Collection</Link>

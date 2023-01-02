@@ -1,9 +1,60 @@
 {
     "robots": [
         {
-            "name": "robot1",
-            "speed": 1,
-            "cretor": "user1"
+            "id": 1,
+            "name": "Robot1",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2020-01-01"
+        },
+        {
+            "id": 2,
+            "name": "robot2",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2021-01-01"
+        },
+        {
+            "id": 3,
+            "name": "robot3",
+            "speed": 10,
+            "resistance": 10,
+            "user": "Miguel",
+            "date": "2022-01-01"
+        },
+        {
+            "name": "s",
+            "speed": "2",
+            "resistance": "2",
+            "user": "s",
+            "id": 4
+        },
+        {
+            "name": "dsfd",
+            "speed": "3",
+            "resistance": "2",
+            "user": "sdf",
+            "id": 5
+        },
+        {
+            "name": "test1",
+            "speed": "-1",
+            "resistance": 0,
+            "user": "",
+            "id": "123860",
+            "date": "2/1/2023",
+            "isFavorite": false
+        },
+        {
+            "name": "test2",
+            "speed": "2",
+            "resistance": "2",
+            "user": "test2",
+            "id": "921139",
+            "date": "2/1/2023",
+            "isFavorite": false
         }
     ]
 }
