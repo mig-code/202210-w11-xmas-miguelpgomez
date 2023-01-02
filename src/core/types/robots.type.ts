@@ -7,10 +7,7 @@ export type RobotInfo = {
     date: string;
     imageUrl: string;
     isFavorite: boolean;
-
 };
-
-
 
 export class Robot implements RobotInfo {
     static generateId() {
@@ -19,20 +16,17 @@ export class Robot implements RobotInfo {
         return ('000000' + aNumbers[0]).slice(-6);
     }
     id: string;
-   constructor(
+    constructor(
         public name: string,
         public speed: number,
         public resistance: number,
         public user: string,
         public date: string,
         public imageUrl: string,
-        public isFavorite: boolean,
+        public isFavorite: boolean
     ) {
         this.id = Robot.generateId();
         this.isFavorite = false;
         this.date = new Date().toLocaleDateString();
     }
 }
-
-
-
