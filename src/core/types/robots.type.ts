@@ -5,7 +5,7 @@ export type RobotInfo = {
     resistance: number;
     user: string;
     date: string;
-    imageUrl: string;
+
     isFavorite: boolean;
 };
 
@@ -16,14 +16,14 @@ export class Robot implements RobotInfo {
         return ('000000' + aNumbers[0]).slice(-6);
     }
     id: string;
+    date: string;
+    isFavorite: boolean;
     constructor(
         public name: string,
         public speed: number,
         public resistance: number,
         public user: string,
-        public date: string,
-        public imageUrl: string,
-        public isFavorite: boolean
+     
     ) {
         this.id = Robot.generateId();
         this.isFavorite = false;

@@ -1,7 +1,9 @@
 import { SyntheticEvent, useState } from 'react';
-import { RobotInfo } from '../../../../core/types/robots.type';
+import { Robot, RobotInfo } from '../../../../core/types/robots.type';
 
-export function RobotAdd() {
+export function RobotAdd( 
+    { handleAdd }: { handleAdd: (robot: RobotInfo) => Promise<void> }
+) {
     const initialRobotInfo: Partial<RobotInfo> = {
         name: '',
         speed: 0,
@@ -20,6 +22,14 @@ export function RobotAdd() {
         ev.preventDefault();
         console.log('Robot añadido');
         console.log(robotFormData);
+        handleAdd(
+            new Robot(
+                robotFormData.name as string,
+                robotFormData.speed as number,
+                robotFormData.resistance as number,
+                robotFormData.user as string
+            )
+        );
 
         setRobotFormData(initialRobotInfo);
     };
@@ -36,6 +46,7 @@ export function RobotAdd() {
                         placeholder="Nombre del robot"
                         value={robotFormData.name}
                         onInput={handleInput}
+                        required
                     />
                 </div>
                 <div>
@@ -47,6 +58,7 @@ export function RobotAdd() {
                         value={robotFormData.speed}
                         onInput={handleInput}
                         placeholder="Velocidad del robot"
+                        required
                     />
                 </div>
                 <div>
@@ -58,6 +70,7 @@ export function RobotAdd() {
                         value={robotFormData.resistance}
                         onInput={handleInput}
                         placeholder="Resistencia del robot"
+                        required
                     />
                 </div>
                 <div>
@@ -69,6 +82,7 @@ export function RobotAdd() {
                         value={robotFormData.user}
                         onInput={handleInput}
                         placeholder="Nombre del usuario"
+                        required
                     />
                 </div>
                 <div>

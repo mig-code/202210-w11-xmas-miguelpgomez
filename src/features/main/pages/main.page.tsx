@@ -14,6 +14,10 @@ export function MainPage() {
         await repo.delete(id);
         setRobots(robots.filter((robot) => robot.id !== id));
     };
+    const handleAdd = async (robot: RobotInfo) => {
+        await repo.create(robot);
+        setRobots([...robots, robot]);
+    };
      useEffect(() => {
          repo.load().then((robots) => setRobots(robots));
          
@@ -21,7 +25,7 @@ export function MainPage() {
     return (
         <div>
             <h1>Main page</h1>
-            <RobotAdd></RobotAdd>
+            <RobotAdd handleAdd={handleAdd} ></RobotAdd>
             <RobotList handleDelete={handleDelete} robots={robots}></RobotList>
         </div>
     );

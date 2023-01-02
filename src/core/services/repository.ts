@@ -5,7 +5,7 @@ const invalidIdError = new Error('Invalid ID');
 
 export class RobotRepository implements Repository<RobotInfo> {
     constructor(private url = 'http://localhost:3001/robots/') {
-        //
+        
     }
 
     async load(): Promise<RobotInfo[]> {
