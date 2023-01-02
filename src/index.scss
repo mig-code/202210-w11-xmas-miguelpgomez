@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #141115;
+    --text-color: #fff;
+    --primary-color: #d33e43;
+    --secondary-color: #3ec300;
+    --tertiary-color: #2b59c3;
+}
+body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Inconsolata', monospace;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+h1,
+h2 {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: var(--bg-color);
+}
+
+.main-nav {
+    background-color: var(--main-nav-bg-color);
+    padding: 1rem 0;
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 1rem;
+        border: 1px solid var(--text-color);
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    &__item:hover {
+        background-color: var(--secondary-color);
+    }
+}
+.add-robots-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--text-color);
+}
+.add-robot {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+
+    input {
+        font-family: inherit;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+    label {
+        margin-right: 0.5rem;
+        margin: 1rem;
+    }
+}
+
+.robots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem 0;
+}
+.robot-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid var(--text-color);
+    background-color: var(--bg-color);
+
+    p {
+        margin: 0.4rem;
+    }
+    img {
+        width: 50%;
+        background-color: var(--tertiary-color);
+        border-radius: 40%;
+        overflow: hidden;
+        border: 4px dotted var(--text-color);
+        transform: rotate(4deg) translateZ(0);
+    }
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--secondary-color);
+    }
+}

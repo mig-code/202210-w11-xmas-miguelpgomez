@@ -12,11 +12,11 @@ export function RobotList({
   
 
     return (
-        <div>
-            <h2>Estos son los robots añadidos</h2>
-            <ul>
+        <div className='robot-list'>
+            <h2>Robots añadidos</h2>
+            <ul className='robots-container'>
                 {robots.map((robot) => (
-                    <li key={robot.id}>
+                    <li className='robot-item' key={robot.id}>
                         <h3>{robot.name}</h3>
                         <img
                             src={`https://robohash.org/${robot.name}`}
