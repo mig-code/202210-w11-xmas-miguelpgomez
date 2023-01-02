@@ -34,7 +34,7 @@ export function RobotAdd(
         setRobotFormData(initialRobotInfo);
     };
     return (
-        <section>
+        <section className='add-robots-container'>
             <h3>Añadir Robot</h3>
             <form className="add-robot" onSubmit={handleSubmit}>
                 <div>

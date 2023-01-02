@@ -20,10 +20,10 @@ export function MainPage() {
     };
     useEffect(() => {
         repo.load().then((robots) => setRobots(robots));
-    });
+        console.log('useEffect');
+    }, []);
     return (
         <div>
-            <h1>Main page</h1>
             <RobotAdd handleAdd={handleAdd}></RobotAdd>
             <RobotList handleDelete={handleDelete} robots={robots}></RobotList>
         </div>
