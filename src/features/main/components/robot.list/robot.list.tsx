@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
-import { RobotInfo } from "../../../../core/types/robots.type";
 
-export function RobotList() {
-const [robots, setRobots] = useState<RobotInfo[]>([]);
-useEffect(() => {
-    fetch('http://localhost:3001/robots')
-        .then((response) => response.json())
-        .then((data) => setRobots(data));
-}, []);
+import { RobotInfo } from '../../../../core/types/robots.type';
 
+export function RobotList({
+    handleDelete,
+    robots,
+}: {
+    handleDelete: (id: string) => Promise<void>;
+    robots: Array<RobotInfo>;
+}) {
+   
+  
 
     return (
         <div>
@@ -21,10 +22,13 @@ useEffect(() => {
                             src={`https://robohash.org/${robot.name}`}
                             alt={robot.name}
                         />
-                       
+
                         <p>Velocidad: {robot.speed}</p>
                         <p>Resistencia: {robot.resistance}</p>
                         <p>Usuario: {robot.user}</p>
+                        <button onClick={() => handleDelete(robot.id)}>
+                            Borrar
+                        </button>
                     </li>
                 ))}
             </ul>

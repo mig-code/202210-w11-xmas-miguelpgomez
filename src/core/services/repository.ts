@@ -3,7 +3,7 @@ import { RobotInfo } from '../types/robots.type';
 
 const invalidIdError = new Error('Invalid ID');
 
-export class NotesRepo implements Repository<RobotInfo> {
+export class RobotRepository implements Repository<RobotInfo> {
     constructor(private url = 'http://localhost:3001/robots/') {
         //
     }
