@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { RobotRepository } from '../../../core/services/repository';
-import { RobotInfo } from '../../../core/types/robots.type';
+import { RobotInfo } from '../types/robots.type';
 import { RobotUpdate } from '../components/robot.update/robot.update';
 
 export function DetailsPage() {

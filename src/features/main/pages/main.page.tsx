@@ -1,7 +1,7 @@
 import { RobotAdd } from '../components/robot.add/robot.add';
 import { RobotList } from '../components/robot.list/robot.list';
 import { useEffect } from 'react';
-import { useRobots } from '../../../core/components/hooks/useRobots';
+import { useRobots } from '../hooks/useRobots';
 
 export function MainPage() {
     const { robots, handleDelete, handleAdd, handleFavorite, handleLoad } =

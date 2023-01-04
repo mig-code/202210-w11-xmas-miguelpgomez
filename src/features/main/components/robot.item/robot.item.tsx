@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { RobotInfo } from '../../../../core/types/robots.type';
+import { RobotInfo } from '../../types/robots.type';
 
 export function RobotItem({
     handleDelete,
