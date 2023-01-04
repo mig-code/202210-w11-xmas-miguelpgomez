@@ -7,6 +7,7 @@
     --primary-color: #d33e43;
     --secondary-color: #3ec300;
     --tertiary-color: #2b59c3;
+    --favorite-color: #f7b731;
 }
 body {
     margin: 0;
@@ -109,6 +110,9 @@ h2 {
         border: 4px dotted var(--text-color);
         transform: rotate(4deg) translateZ(0);
     }
+    .favourite {
+        background-color: var(--favorite-color);
+    }
 }
 
 button {
@@ -123,3 +127,11 @@ button {
         background-color: var(--secondary-color);
     }
 }
+.button--isFavorite {
+    background-color: var(--tertiary-color);
+    &:hover {
+        background-color: var(--primary-color);
+    }
+}
+
+

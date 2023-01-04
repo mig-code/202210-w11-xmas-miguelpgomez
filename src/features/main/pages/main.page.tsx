@@ -5,7 +5,7 @@ import { RobotList } from '../components/robot.list/robot.list';
 import { useEffect, useMemo, useState } from 'react';
 
 export function MainPage() {
-    const repo =  useMemo( ()=> new RobotRepository(), [])
+    const repo = useMemo(() => new RobotRepository(), []);
     const initialRobots = Array<RobotInfo>;
 
     const [robots, setRobots] = useState<RobotInfo[]>(initialRobots);
@@ -18,6 +18,16 @@ export function MainPage() {
         await repo.create(robot);
         setRobots([...robots, robot]);
     };
+    const handleFavorite = async (robot: Partial<RobotInfo>) => {
+        console.log(robot);
+        robot.isFavorite = !robot.isFavorite;
+        await repo.update(robot);
+        setRobots(
+            robots.map((item) =>
+                item.id === robot.id ? { ...item, ...robot } : item
+            )
+        );
+    };
     useEffect(() => {
         repo.load().then((robots) => setRobots(robots));
         console.log('useEffect');
@@ -25,7 +35,11 @@ export function MainPage() {
     return (
         <div>
             <RobotAdd handleAdd={handleAdd}></RobotAdd>
-            <RobotList handleDelete={handleDelete} robots={robots}></RobotList>
+            <RobotList
+                handleDelete={handleDelete}
+                handleFavorite={handleFavorite}
+                robots={robots}
+            ></RobotList>
         </div>
     );
 }
