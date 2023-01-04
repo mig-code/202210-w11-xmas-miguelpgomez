@@ -1,5 +1,5 @@
 import { SyntheticEvent, useEffect, useState } from 'react';
-import {  RobotInfo } from '../../../../core/types/robots.type';
+import { RobotInfo } from '../../../../core/models/robots.models';
 
 export function RobotUpdate({
     handleUpdate,
@@ -16,7 +16,6 @@ export function RobotUpdate({
     };
 
     const [robotFormData, setRobotFormData] = useState(initialRobotInfo);
-   
 
     const handleInput = (ev: SyntheticEvent) => {
         const element = ev.target as HTMLFormElement;
@@ -91,7 +90,9 @@ export function RobotUpdate({
                     />
                 </div>
                 <div>
-                    <button className='button--edit' type="submit">Actualizar</button>
+                    <button className="button--edit" type="submit">
+                        Actualizar
+                    </button>
                 </div>
             </form>
         </section>
