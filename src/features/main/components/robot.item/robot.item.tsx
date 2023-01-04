@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { RobotInfo } from "../../../../core/types/robots.type";
+import { Link } from 'react-router-dom';
+import { RobotInfo } from '../../../../core/types/robots.type';
 
 export function RobotItem({
     handleDelete,
@@ -22,19 +22,25 @@ export function RobotItem({
             <p>Velocidad: {robot.speed}</p>
             <p>Resistencia: {robot.resistance}</p>
             <p>Usuario: {robot.user}</p>
-            <button onClick={() => handleDelete(robot.id)}>Borrar</button>
-
-            <button
-                className={'button--isFavorite'}
-                onClick={() => handleFavorite(robot)}
-            >
-                {robot.isFavorite
-                    ? 'Quitar de favoritos'
-                    : 'Añadir a favoritos'}
-            </button>
-            <Link to={`/details/${robot.id}`}>
-                <button>Editar</button>
-            </Link>
+            <div className="buttons-container">
+                <button
+                    className="button--isfavorite"
+                    onClick={() => handleFavorite(robot)}
+                >
+                    {robot.isFavorite
+                        ? 'Quitar de favoritos'
+                        : 'Añadir a favoritos'}
+                </button>
+                <Link to={`/details/${robot.id}`}>
+                    <button>Editar</button>
+                </Link>
+                <button
+                    className="button--delete"
+                    onClick={() => handleDelete(robot.id)}
+                >
+                    Borrar
+                </button>
+            </div>
         </>
     );
 }

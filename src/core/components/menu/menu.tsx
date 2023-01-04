@@ -9,7 +9,7 @@ export function Menu() {
                 </Link>
 
                 <Link to={'robots'}>
-                    <li className="main-nav__item">Colleccion </li>
+                    <li className="main-nav__item">Collección </li>
                 </Link>
 
                 <Link to={'favorites'}>

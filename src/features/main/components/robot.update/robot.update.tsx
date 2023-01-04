@@ -39,7 +39,7 @@ export function RobotUpdate({
         setRobotFormData(robotInfo);
     }, [robot]);
     return (
-        <section className="add-robots-container">
+        <section className="edit-robots-container">
             <h3>Editar Robot</h3>
             <form className="add-robot" onSubmit={handleSubmit}>
                 <div>
@@ -91,7 +91,7 @@ export function RobotUpdate({
                     />
                 </div>
                 <div>
-                    <button type="submit">Actualizar</button>
+                    <button className='button--edit' type="submit">Actualizar</button>
                 </div>
             </form>
         </section>

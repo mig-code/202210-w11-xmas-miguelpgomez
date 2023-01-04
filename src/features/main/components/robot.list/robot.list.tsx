@@ -1,4 +1,4 @@
-import {  RobotInfo } from '../../../../core/types/robots.type';
+import { RobotInfo } from '../../../../core/types/robots.type';
 import { RobotItem } from '../robot.item/robot.item';
 
 export function RobotList({
@@ -21,7 +21,6 @@ export function RobotList({
                             handleFavorite={handleFavorite}
                             robot={robot}
                         ></RobotItem>
-                       
                     </li>
                 ))}
             </ul>
