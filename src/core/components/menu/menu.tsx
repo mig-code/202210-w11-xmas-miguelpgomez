@@ -10,6 +10,9 @@ export function Menu() {
                 <li className="main-nav__item">
                     <Link to={'robots'}>Collection</Link>
                 </li>
+                <li className="main-nav__item">
+                    <Link to={'favorites'}>Favorites</Link>
+                </li>
             </ul>
         </nav>
     );

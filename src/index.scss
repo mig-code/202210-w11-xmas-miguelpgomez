@@ -130,8 +130,7 @@ button {
 .button--isFavorite {
     background-color: var(--tertiary-color);
     &:hover {
-        background-color: var(--primary-color);
+        background-color: var(--favorite-color);
+        color: var(--bg-color);
     }
 }
-
-

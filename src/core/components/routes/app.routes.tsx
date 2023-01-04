@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { HomePage } from '../../../features/home/pages/home.page';
+import { FavoritePage } from '../../../features/main/pages/favorite.page';
 import { MainPage } from '../../../features/main/pages/main.page';
 
 
@@ -9,6 +10,7 @@ export function AppRoutes() {
         <Routes>
             <Route path={''} element={<HomePage></HomePage>}></Route>
             <Route path={'robots'} element={<MainPage></MainPage>}></Route>
+            <Route path={'favorites'} element={<FavoritePage></FavoritePage>}></Route>
 
             <Route
                 path={'*'}
