@@ -1,5 +1,15 @@
 import { RobotInfo } from "../models/robots.models";
 
+export const robotMock: RobotInfo = {
+    "name": "test1",
+    "speed": 1,
+    "resistance": 0,
+    "user": " user 1",
+    "id": "123860",
+    "date": "2/1/2023",
+    "isFavorite": true
+}
+
 export const arrayRobotsMock: Array<RobotInfo> = [{
             "name": "test1",
             "speed": 1,
