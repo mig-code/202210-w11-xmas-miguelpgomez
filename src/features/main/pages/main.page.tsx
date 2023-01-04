@@ -2,7 +2,7 @@ import { RobotRepository } from '../../../core/services/repository';
 import { RobotInfo } from '../../../core/types/robots.type';
 import { RobotAdd } from '../components/robot.add/robot.add';
 import { RobotList } from '../components/robot.list/robot.list';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 export function MainPage() {
     const repo = useMemo(() => new RobotRepository(), []);
@@ -28,10 +28,14 @@ export function MainPage() {
             )
         );
     };
-    useEffect(() => {
-        repo.load().then((robots) => setRobots(robots));
-        console.log('useEffect');
+    const handleLoad = useCallback(async () => {
+        const robots = await repo.load();
+        setRobots(robots);
     }, [repo]);
+    useEffect(() => {
+        handleLoad();
+        console.log('useEffect');
+    }, [handleLoad]);
     return (
         <div>
             <RobotAdd handleAdd={handleAdd}></RobotAdd>

@@ -1,8 +1,7 @@
 import { RobotRepository } from '../../../core/services/repository';
 import { RobotInfo } from '../../../core/types/robots.type';
 
-
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FavoriteList } from '../components/favorite.list/favorite.list';
 
 export function FavoritePage() {
@@ -26,10 +25,14 @@ export function FavoritePage() {
             )
         );
     };
-    useEffect(() => {
-        repo.load().then((robots) => setRobots(robots));
-        console.log('useEffect');
+    const handleLoad = useCallback(async () => {
+        const robots = await repo.load();
+        setRobots(robots);
     }, [repo]);
+    useEffect(() => {
+        handleLoad();
+        console.log('useEffect');
+    }, [handleLoad]);
     return (
         <div>
             <FavoriteList
