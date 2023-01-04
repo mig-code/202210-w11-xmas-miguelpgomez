@@ -7,16 +7,7 @@
             "user": "",
             "id": "123860",
             "date": "2/1/2023",
-            "isFavorite": true
-        },
-        {
-            "name": "test2",
-            "speed": "2",
-            "resistance": "2",
-            "user": "test2",
-            "id": "921139",
-            "date": "2/1/2023",
-            "isFavorite": true
+            "isFavorite": false
         },
         {
             "name": "cuatro",
@@ -33,6 +24,15 @@
             "resistance": "4",
             "user": "pedrito",
             "id": "468138",
+            "date": "4/1/2023",
+            "isFavorite": false
+        },
+        {
+            "name": "sdf",
+            "speed": "-1",
+            "resistance": "1",
+            "user": "sdf",
+            "id": "561101",
             "date": "4/1/2023",
             "isFavorite": false
         }
