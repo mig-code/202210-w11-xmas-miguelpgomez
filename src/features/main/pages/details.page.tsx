@@ -26,7 +26,7 @@ export function DetailsPage() {
     }, [handleLoad]);
 
     return (
-        <div className="robots-container">
+        <section className="edit-section">
             <div className="robot-item">
                 <h3>{robot?.name}</h3>
                 <img
@@ -44,6 +44,6 @@ export function DetailsPage() {
                 handleUpdate={handleUpdate}
                 robot={robot}
             ></RobotUpdate>
-        </div>
+        </section>
     );
 }

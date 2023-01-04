@@ -35,10 +35,15 @@ h2 {
 
 .container {
     max-width: 1200px;
+    min-height: 600px;
     margin: 0 auto;
     padding: 0 1rem;
     background-color: var(--bg-color);
 }
+.main-header {
+    padding-top: 1rem;
+}
+
 
 .main-nav {
     background-color: var(--main-nav-bg-color);
@@ -55,14 +60,22 @@ h2 {
         cursor: pointer;
     }
     &__item:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--tertiary-color);
     }
 }
-.add-robots-container {
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.add-robots-container,
+.edit-robots-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    width: fit-content;
     margin-bottom: 1rem;
     padding: 1rem;
     border: 1px solid var(--text-color);
@@ -77,10 +90,12 @@ h2 {
         font-family: inherit;
         margin-top: 1rem;
         padding: 0.5rem;
+        background-color: var(--text-color);
+        color: var(--bg-color);
     }
     label {
-        margin-right: 0.5rem;
         margin: 1rem;
+        margin-right: 0.5rem;
     }
 }
 
@@ -115,10 +130,29 @@ h2 {
     }
 }
 
+.edit-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    padding: 1rem;
+    .edit-robots-container {
+        margin-left: 2rem;
+        background-color: #d33e43;
+    }
+    button {
+        background-color: var(--bg-color);
+    }
+    button:hover {
+        background-color: var(--tertiary-color);
+    }
+}
+
 button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
     color: var(--text-color);
     border: none;
     border-radius: 0.5rem;
@@ -127,8 +161,22 @@ button {
         background-color: var(--secondary-color);
     }
 }
-.button--isFavorite {
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.button--delete {
+    background-color: var(--primary-color);
+    &:hover {
+        background-color: var(--secondary-color);
+    }
+}
+
+.button--isfavorite {
     background-color: var(--tertiary-color);
+
     &:hover {
         background-color: var(--favorite-color);
         color: var(--bg-color);

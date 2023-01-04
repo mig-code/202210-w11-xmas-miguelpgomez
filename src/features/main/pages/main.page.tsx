@@ -8,16 +8,15 @@ export function MainPage() {
         useRobots();
     useEffect(() => {
         handleLoad();
-        
     }, [handleLoad]);
     return (
-        <div>
+        <section className="main-page">
             <RobotAdd handleAdd={handleAdd}></RobotAdd>
             <RobotList
                 handleDelete={handleDelete}
                 handleFavorite={handleFavorite}
                 robots={robots}
             ></RobotList>
-        </div>
+        </section>
     );
 }

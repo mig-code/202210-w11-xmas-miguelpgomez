@@ -8,12 +8,12 @@ export function FavoritePage() {
         handleLoad();
     }, [handleLoad]);
     return (
-        <div>
+        <section className="favorite-page">
             <FavoriteList
                 handleDelete={handleDelete}
                 handleFavorite={handleFavorite}
                 robots={robots}
             ></FavoriteList>
-        </div>
+        </section>
     );
 }
