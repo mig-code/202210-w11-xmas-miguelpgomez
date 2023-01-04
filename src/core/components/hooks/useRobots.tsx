@@ -22,7 +22,7 @@ export function useRobots() {
         setStorageList("robots", [robots.length +1])
     };
     const handleFavorite = async (robot: Partial<RobotInfo>) => {
-        console.log(robot);
+       
         robot.isFavorite = !robot.isFavorite;
         await repo.update(robot);
         setRobots(

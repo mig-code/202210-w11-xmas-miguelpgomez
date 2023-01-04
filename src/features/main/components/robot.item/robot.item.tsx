@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { RobotInfo } from "../../../../core/types/robots.type";
 
 export function RobotItem({
@@ -31,6 +32,9 @@ export function RobotItem({
                     ? 'Quitar de favoritos'
                     : 'Añadir a favoritos'}
             </button>
+            <Link to={`/details/${robot.id}`}>
+                <button>Editar</button>
+            </Link>
         </>
     );
 }
