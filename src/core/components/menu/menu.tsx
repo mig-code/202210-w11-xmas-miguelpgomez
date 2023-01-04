@@ -4,15 +4,17 @@ export function Menu() {
     return (
         <nav className="main-nav">
             <ul className="main-nav__list">
-                <li className="main-nav__item">
-                    <Link to={'/'}>Home</Link>
-                </li>
-                <li className="main-nav__item">
-                    <Link to={'robots'}>Collection</Link>
-                </li>
-                <li className="main-nav__item">
-                    <Link to={'favorites'}>Favorites</Link>
-                </li>
+                <Link to={'/'}>
+                    <li className="main-nav__item">Inicio </li>
+                </Link>
+
+                <Link to={'robots'}>
+                    <li className="main-nav__item">Colleccion </li>
+                </Link>
+
+                <Link to={'favorites'}>
+                    <li className="main-nav__item">Favoritos</li>
+                </Link>
             </ul>
         </nav>
     );

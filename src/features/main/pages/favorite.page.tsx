@@ -1,8 +1,9 @@
 import { RobotRepository } from '../../../core/services/repository';
 import { RobotInfo } from '../../../core/types/robots.type';
 
-import { RobotList } from '../components/robot.list/robot.list';
+
 import { useEffect, useMemo, useState } from 'react';
+import { FavoriteList } from '../components/favorite.list/favorite.list';
 
 export function FavoritePage() {
     const repo = useMemo(() => new RobotRepository(), []);
@@ -31,11 +32,11 @@ export function FavoritePage() {
     }, [repo]);
     return (
         <div>
-            <RobotList
+            <FavoriteList
                 handleDelete={handleDelete}
                 handleFavorite={handleFavorite}
                 robots={robots}
-            ></RobotList>
+            ></FavoriteList>
         </div>
     );
 }
