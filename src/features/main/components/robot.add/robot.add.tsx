@@ -1,9 +1,11 @@
 import { SyntheticEvent, useState } from 'react';
 import { Robot, RobotInfo } from '../../../../core/types/robots.type';
 
-export function RobotAdd( 
-    { handleAdd }: { handleAdd: (robot: RobotInfo) => Promise<void> }
-) {
+export function RobotAdd({
+    handleAdd,
+}: {
+    handleAdd: (robot: RobotInfo) => Promise<void>;
+}) {
     const initialRobotInfo: Partial<RobotInfo> = {
         name: '',
         speed: 0,
@@ -34,7 +36,7 @@ export function RobotAdd(
         setRobotFormData(initialRobotInfo);
     };
     return (
-        <section className='add-robots-container'>
+        <section className="add-robots-container">
             <h3>Añadir Robot</h3>
             <form className="add-robot" onSubmit={handleSubmit}>
                 <div>

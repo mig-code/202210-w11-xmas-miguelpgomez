@@ -4,9 +4,7 @@ import { RobotInfo } from '../types/robots.type';
 const invalidIdError = new Error('Invalid ID');
 
 export class RobotRepository implements Repository<RobotInfo> {
-    constructor(private url = 'http://localhost:3001/robots/') {
-        
-    }
+    constructor(private url = 'http://localhost:3001/robots/') {}
 
     async load(): Promise<RobotInfo[]> {
         const resp = await fetch(this.url);
