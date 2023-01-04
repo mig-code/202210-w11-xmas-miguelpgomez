@@ -44,7 +44,6 @@ h2 {
     padding-top: 1rem;
 }
 
-
 .main-nav {
     background-color: var(--main-nav-bg-color);
     padding: 1rem 0;
@@ -141,12 +140,6 @@ h2 {
         margin-left: 2rem;
         background-color: #d33e43;
     }
-    button {
-        background-color: var(--bg-color);
-    }
-    button:hover {
-        background-color: var(--tertiary-color);
-    }
 }
 
 button {
@@ -181,4 +174,10 @@ button {
         background-color: var(--favorite-color);
         color: var(--bg-color);
     }
+}
+.button--edit {
+    background-color: var(--bg-color);
+}
+.button--edit:hover {
+    background-color: var(--tertiary-color);
 }

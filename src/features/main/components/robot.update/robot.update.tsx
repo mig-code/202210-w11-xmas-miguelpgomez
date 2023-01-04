@@ -91,7 +91,7 @@ export function RobotUpdate({
                     />
                 </div>
                 <div>
-                    <button type="submit">Actualizar</button>
+                    <button className='button--edit' type="submit">Actualizar</button>
                 </div>
             </form>
         </section>
