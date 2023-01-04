@@ -1,7 +1,7 @@
-import {  RobotInfo } from '../../../../core/types/robots.type';
+import { RobotInfo } from '../../../../core/types/robots.type';
 import { RobotItem } from '../robot.item/robot.item';
 
-export function RobotList({
+export function FavoriteList({
     handleDelete,
     handleFavorite,
     robots,
@@ -12,18 +12,19 @@ export function RobotList({
 }) {
     return (
         <div className="robot-list">
-            <h2>Robots añadidos</h2>
+            <h2>Robots Favoritos</h2>
             <ul className="robots-container">
                 {robots.map((robot) => (
+                    robot.isFavorite && (
                     <li className="robot-item" key={robot.id}>
                         <RobotItem
                             handleDelete={handleDelete}
                             handleFavorite={handleFavorite}
                             robot={robot}
                         ></RobotItem>
-                       
                     </li>
-                ))}
+                ))
+                )}
             </ul>
         </div>
     );
