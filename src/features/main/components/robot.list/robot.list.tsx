@@ -1,4 +1,4 @@
-import { RobotInfo } from '../../../../core/models/robots.models';
+import { RobotInfo } from '../../models/robots.models';
 import { RobotItem } from '../robot.item/robot.item';
 
 export function RobotList({

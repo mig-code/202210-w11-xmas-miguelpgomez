@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
-import { RobotRepository } from '../../services/repository';
-import { setStorageList } from '../../services/storage';
-import { RobotInfo } from '../../models/robots.models';
+import { RobotRepository } from '../../../core/services/repository';
+import { setStorageList } from '../../../core/services/storage';
+import { RobotInfo } from '../models/robots.models';
 
 export function useRobots() {
     const repo = useMemo(() => new RobotRepository(), []);

@@ -1,5 +1,5 @@
 import { SyntheticEvent, useState } from 'react';
-import { Robot, RobotInfo } from '../../../../core/models/robots.models';
+import { Robot, RobotInfo } from '../../models/robots.models';
 
 export function RobotAdd({
     handleAdd,
