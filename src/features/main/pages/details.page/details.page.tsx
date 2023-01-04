@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { RobotRepository } from '../../../core/services/repository';
-import { RobotInfo } from '../../../core/types/robots.type';
-import { RobotUpdate } from '../components/robot.update/robot.update';
+import { RobotRepository } from '../../../../core/services/repository/repository';
+import { RobotInfo } from '../../models/robots.models';
+import { RobotUpdate } from '../../components/robot.update/robot.update';
 
 export function DetailsPage() {
     const { robotId } = useParams();

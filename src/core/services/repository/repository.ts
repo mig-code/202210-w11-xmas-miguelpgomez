@@ -1,5 +1,5 @@
-import { Repository } from '../interfaces/repository.interface';
-import { RobotInfo } from '../types/robots.type';
+import { Repository } from '../../interfaces/repository.interface';
+import { RobotInfo } from '../../../features/main/models/robots.models';
 
 const invalidIdError = new Error('Invalid ID');
 

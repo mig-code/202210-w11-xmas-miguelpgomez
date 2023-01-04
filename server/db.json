@@ -16,7 +16,7 @@
             "user": "cuatrocientos",
             "id": "769364",
             "date": "4/1/2023",
-            "isFavorite": true
+            "isFavorite": false
         },
         {
             "name": "pedro",
@@ -28,7 +28,7 @@
             "isFavorite": false
         },
         {
-            "name": "sdf",
+            "name": "Juan",
             "speed": "-1",
             "resistance": "1",
             "user": "sdf",

@@ -1,12 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+
 import { BrowserRouter } from 'react-router-dom';
+import { HomePage } from './home.page';
 
 test('renders Home Page', () => {
     render(
         <BrowserRouter>
-            <App></App>
+            <HomePage></HomePage>
         </BrowserRouter>
     );
     const textElement = screen.getByText(/Total Robots/i);

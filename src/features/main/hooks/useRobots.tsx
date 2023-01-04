@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
-import { RobotRepository } from '../../services/repository';
-import { setStorageList } from '../../services/storage';
-import { RobotInfo } from '../../types/robots.type';
+import { RobotRepository } from '../../../core/services/repository/repository';
+import { setStorageList } from '../../../core/services/storage/storage';
+import { RobotInfo } from '../models/robots.models';
 
 export function useRobots() {
     const repo = useMemo(() => new RobotRepository(), []);
@@ -19,10 +19,9 @@ export function useRobots() {
     const handleAdd = async (robot: RobotInfo) => {
         await repo.create(robot);
         setRobots([...robots, robot]);
-        setStorageList("robots", [robots.length +1])
+        setStorageList('robots', [robots.length + 1]);
     };
     const handleFavorite = async (robot: Partial<RobotInfo>) => {
-       
         robot.isFavorite = !robot.isFavorite;
         await repo.update(robot);
         setRobots(
