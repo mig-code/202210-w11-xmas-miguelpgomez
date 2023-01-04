@@ -1,19 +1,22 @@
-import { SyntheticEvent, useState } from 'react';
-import { Robot, RobotInfo } from '../../../../core/types/robots.type';
+import { SyntheticEvent, useEffect, useState } from 'react';
+import {  RobotInfo } from '../../../../core/types/robots.type';
 
-export function RobotAdd({
-    handleAdd,
+export function RobotUpdate({
+    handleUpdate,
+    robot,
 }: {
-    handleAdd: (robot: RobotInfo) => Promise<void>;
+    handleUpdate: (robot: RobotInfo) => Promise<void>;
+    robot: RobotInfo | undefined;
 }) {
     const initialRobotInfo: Partial<RobotInfo> = {
-        name: '',
-        speed: 0,
-        resistance: 0,
-        user: '',
+        name: robot?.name,
+        speed: robot?.speed,
+        resistance: robot?.resistance,
+        user: robot?.user,
     };
 
     const [robotFormData, setRobotFormData] = useState(initialRobotInfo);
+   
 
     const handleInput = (ev: SyntheticEvent) => {
         const element = ev.target as HTMLFormElement;
@@ -22,20 +25,22 @@ export function RobotAdd({
 
     const handleSubmit = (ev: SyntheticEvent) => {
         ev.preventDefault();
-        handleAdd(
-            new Robot(
-                robotFormData.name as string,
-                robotFormData.speed as number,
-                robotFormData.resistance as number,
-                robotFormData.user as string
-            )
-        );
-
+        handleUpdate(robotFormData as RobotInfo);
         setRobotFormData(initialRobotInfo);
     };
+    useEffect(() => {
+        const robotInfo = {
+            name: robot?.name,
+            speed: robot?.speed,
+            resistance: robot?.resistance,
+            user: robot?.user,
+            id: robot?.id,
+        };
+        setRobotFormData(robotInfo);
+    }, [robot]);
     return (
         <section className="add-robots-container">
-            <h3>Añadir Robot</h3>
+            <h3>Editar Robot</h3>
             <form className="add-robot" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Nombre</label>
@@ -86,7 +91,7 @@ export function RobotAdd({
                     />
                 </div>
                 <div>
-                    <button type="submit">Añadir</button>
+                    <button type="submit">Actualizar</button>
                 </div>
             </form>
         </section>
