@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { FavoriteList } from '../components/favorite.list/favorite.list';
-import { useRobots } from '../../../core/components/hooks/useRobots';
+import { FavoriteList } from '../../components/favorite.list/favorite.list';
+import { useRobots } from '../../../../core/components/hooks/useRobots';
 
 export function FavoritePage() {
     const { robots, handleDelete, handleFavorite, handleLoad } = useRobots();

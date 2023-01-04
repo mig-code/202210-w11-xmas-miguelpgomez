@@ -6,7 +6,7 @@ describe('Given Header component', () => {
     test('renders Header', () => {
         render(<Header />);
 
-        const textElement = screen.getByText(/Robot/i);
+        const textElement = screen.getByText(/Robot collection/i);
         expect(textElement).toBeInTheDocument();
     });
 });
