@@ -9,7 +9,7 @@ test('renders Home Page', () => {
             <App></App>
         </BrowserRouter>
     );
-    const textElement = screen.getByText(/Total Robots/i);
+    const textElement = screen.getByText(/No hay robots en la base de datos/i);
     expect(textElement).toBeInTheDocument();
     const imageElement = screen.getByAltText(/robot_home/i);
     expect(imageElement).toBeInTheDocument();
