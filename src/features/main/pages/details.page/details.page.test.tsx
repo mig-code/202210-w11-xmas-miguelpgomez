@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+
 import { DetailsPage } from './details.page';
 
 
@@ -16,4 +17,5 @@ describe('Given Details Page component', () => {
             expect(textElement).toBeInTheDocument();
         });
     });
+    
 });
